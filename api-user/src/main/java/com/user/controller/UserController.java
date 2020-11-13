@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/user")
+@RequestMapping(path = "/users")
 public class UserController {
     
     @Autowired
@@ -44,7 +44,7 @@ public class UserController {
 
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Integer id){
-        this.service.deleteById(id);
+        this.service.delete(id);
     }
 
     @GetMapping(path = "/{id}")

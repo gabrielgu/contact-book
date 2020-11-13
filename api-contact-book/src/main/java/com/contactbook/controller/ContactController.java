@@ -28,13 +28,13 @@ public class ContactController {
     @Autowired
     private ModelMapper modelMapper;
 
-    @PostMapping(path = "/contact")
+    @PostMapping(path = "/contacts")
     public Contact save(@Valid @RequestBody PostContactDTO contactDTO){
         Contact contact = this.modelMapper.map(contactDTO, Contact.class);
         return this.service.save(contact);
     }
 
-    @PutMapping(path = "/contact/{id}")
+    @PutMapping(path = "/contacts/{id}")
     public Contact update(@Valid @RequestBody PutContactDTO contactDTO, 
         @PathVariable Integer id){
         Contact contact = this.modelMapper.map(contactDTO, Contact.class);
@@ -42,22 +42,22 @@ public class ContactController {
         return this.service.update(contact);
     }
 
-    @DeleteMapping(path = "/contact/{id}")
+    @DeleteMapping(path = "/contacts/{id}")
     public void delete(@PathVariable Integer id){
         this.service.delete(id);
     }
 
-    @GetMapping(path = "/contact/{id}")
+    @GetMapping(path = "/contacts/{id}")
     public Contact findById(@PathVariable Integer id){
         return this.service.findById(id);
     }
 
-    @GetMapping(path = "/contact")
+    @GetMapping(path = "/contacts")
     public List<Contact> findAll(){
         return this.service.findAll();
     }
 
-    @GetMapping(path = "/user/{idUser}/contact")
+    @GetMapping(path = "/users/{idUser}/contacts")
     public List<Contact> findAllByIdUser(@PathVariable Integer idUser){
         return this.service.findAllByidUser(idUser);
     }

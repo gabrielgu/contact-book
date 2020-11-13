@@ -1,13 +1,13 @@
-package com.user;
+package com.contactbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiUserApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiUserApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

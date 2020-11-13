@@ -26,13 +26,17 @@ public class UserService {
 
     @Transactional
     public User update(User user) {
-        this.verifyUserExistsById(user.getId());
+        User userFound = this.findById(user.getId());
+        userFound.setUsername(user.getUsername());
+        userFound.setEmail(user.getEmail());
+        userFound.setPassword(user.getPassword());
         return this.repository.save(user);
     }
 
     @Transactional
-    public void deleteById(Integer id){
-        this.repository.deleteById(id);
+    public void delete(Integer id){
+        User userFound = this.findById(id);
+        this.repository.delete(userFound);
     }
 
     public User findById(Integer id){
@@ -45,13 +49,6 @@ public class UserService {
 
     public List<User> findAll(){
         return this.repository.findAll();
-    }
-
-    private void verifyUserExistsById(Integer id){
-        Optional<User> foundUser = this.repository.findById(id);
-        if(!foundUser.isPresent()){
-            throw new BusinessException("User not found.");
-        }
     }
 
     private void verifyUserAlreadyExistsByUsernameOrEmail(String username, String email){
