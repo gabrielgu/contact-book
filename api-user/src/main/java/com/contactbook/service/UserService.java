@@ -1,13 +1,13 @@
-package com.user.service;
+package com.contactbook.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
 
-import com.user.exception.BusinessException;
-import com.user.model.User;
-import com.user.repository.UserRepository;
+import com.contactbook.exception.BusinessException;
+import com.contactbook.model.User;
+import com.contactbook.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,9 +1,9 @@
-package com.user.controller;
+package com.contactbook.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.user.exception.BusinessException;
+import com.contactbook.exception.BusinessException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

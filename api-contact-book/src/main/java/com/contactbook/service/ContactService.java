@@ -25,11 +25,11 @@ public class ContactService {
 
     @Transactional
     public Contact update(Contact contact){
-        Contact contactToUpdate = this.findById(contact.getId());
-        contactToUpdate.setName(contact.getName());
-        contactToUpdate.setEmail(contact.getEmail());
-        contactToUpdate.setPhoneNumber(contact.getPhoneNumber());
-        return this.repository.save(contactToUpdate);
+        Contact persistedContact = this.findById(contact.getId());
+        persistedContact.setName(contact.getName());
+        persistedContact.setEmail(contact.getEmail());
+        persistedContact.setPhoneNumber(contact.getPhoneNumber());
+        return this.repository.save(persistedContact);
     }
 
     @Transactional

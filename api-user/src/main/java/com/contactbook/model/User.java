@@ -1,4 +1,4 @@
-package com.user.model;
+package com.contactbook.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

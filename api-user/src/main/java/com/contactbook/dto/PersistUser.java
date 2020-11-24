@@ -1,4 +1,4 @@
-package com.user.dto;
+package com.contactbook.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

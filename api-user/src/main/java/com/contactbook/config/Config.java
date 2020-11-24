@@ -1,4 +1,4 @@
-package com.user.config;
+package com.contactbook.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;

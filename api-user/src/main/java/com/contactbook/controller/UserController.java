@@ -1,12 +1,12 @@
-package com.user.controller;
+package com.contactbook.controller;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.user.dto.PersistUser;
-import com.user.model.User;
-import com.user.service.UserService;
+import com.contactbook.dto.PersistUser;
+import com.contactbook.model.User;
+import com.contactbook.service.UserService;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.user.exception;
+package com.contactbook.exception;
 
 public class BusinessException extends RuntimeException {
 

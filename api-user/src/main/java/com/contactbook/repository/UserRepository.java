@@ -1,6 +1,6 @@
-package com.user.repository;
+package com.contactbook.repository;
 
-import com.user.model.User;
+import com.contactbook.model.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
