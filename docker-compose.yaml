@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+  api-user:
+    build:
+      context: ./api-user
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    network_mode: "host"
+
+  api-contact-book:
+    build:
+      context: ./api-contact-book
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    network_mode: "host"
