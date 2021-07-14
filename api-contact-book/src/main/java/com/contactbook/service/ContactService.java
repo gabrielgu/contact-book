@@ -38,6 +38,11 @@ public class ContactService {
         this.repository.delete(contact);
     }
 
+    @Transactional
+    public void deleteByIdUser(Integer idUser){
+        this.repository.deleteByIdUser(idUser);
+    }
+
     public Contact findById(Integer id){
         Optional<Contact> optionalContact = this.repository.findById(id);
         if(!optionalContact.isPresent()){

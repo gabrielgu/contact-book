@@ -1,21 +1,22 @@
-package com.contactbook.dto;
+package com.contactbook.model;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+public class User {
 
-public class PersistUser {
+    private Integer id;
 
-    @NotNull(message = "Username can't be null.")
-    @NotBlank(message = "Username can't be blank.")
     private String username;
 
-    @NotNull(message = "Username can't be null.")
-    @NotBlank(message = "Password can't be blank.")
     private String password;
 
-    @NotNull(message = "Username can't be null.")
-    @NotBlank(message = "E-mail can't be blank.")
     private String email;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
@@ -42,3 +43,4 @@ public class PersistUser {
     }
 
 }
+

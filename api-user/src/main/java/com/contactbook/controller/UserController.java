@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import com.contactbook.dto.PersistUser;
+import com.contactbook.dto.UserDTO;
 import com.contactbook.model.User;
 import com.contactbook.service.UserService;
 
@@ -24,19 +24,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     
     @Autowired
-    private UserService service;
+    private UserService service; 
 
     @Autowired
-    private ModelMapper modelMapper;
+    private ModelMapper modelMapper;  
     
     @PostMapping
-    public User save(@Valid @RequestBody PersistUser userDTO){
+    public User save(@Valid @RequestBody UserDTO userDTO){
         User user = this.modelMapper.map(userDTO, User.class);
         return this.service.save(user);
     }
 
     @PutMapping(path = "/{id}")
-    public User update(@Valid @RequestBody PersistUser userDTO, @PathVariable Integer id){
+    public User update(@Valid @RequestBody UserDTO userDTO, @PathVariable Integer id){
         User user = this.modelMapper.map(userDTO, User.class);
         user.setId(id);
         return this.service.update(user);

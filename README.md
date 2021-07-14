@@ -17,3 +17,7 @@ http://localhost:8081/contact-book/swagger-ui.html
 
 Open the browser and paste this URL: 
 http://localhost:8082/contact-book/swagger-ui.html
+
+#### Application Architecture 
+
+![](docs/img/architecture.jpg)

@@ -8,5 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ContactRepository extends JpaRepository<Contact, Integer> {
     
+    public void deleteByIdUser(Integer idUser);
+
     public List<Contact> findAllByidUser(Integer idUser);
 }

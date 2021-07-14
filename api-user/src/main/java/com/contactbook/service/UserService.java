@@ -18,6 +18,9 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
+    @Autowired
+    private UserProducer producer;
+
     @Transactional
     public User save(User user) {
         this.verifyUserAlreadyExistsByUsernameOrEmail(user.getUsername(), user.getEmail());
@@ -37,6 +40,7 @@ public class UserService {
     public void delete(Integer id){
         User userFound = this.findById(id);
         this.repository.delete(userFound);
+        this.producer.userDeleted(userFound);
     }
 
     public User findById(Integer id){
